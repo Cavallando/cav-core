@@ -1,0 +1,52 @@
+{
+  "name": "@cav/react-flow-form-example",
+  "version": "1.0.0",
+  "description": "Example usage of Flow Form",
+  "author": "Michael Cavallaro <michaelcavallaro03@gmail.com>",
+  "homepage": "https://github.com/Cavallando/react-flow-form#readme",
+  "license": "ISC",
+  "main": "dist/react-flow-form-example.js",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cavallando/react-flow-form.git"
+  },
+  "scripts": {
+    "build": "webpack --mode development",
+    "watch": "yarn run build --watch",
+    "start": "webpack serve --mode development"
+  },
+  "dependencies": {
+    "@cav/react-flow-form": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "5.3.6"
+  },
+  "peerDependencies": {
+    "eslint-plugin-n": "^15.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Cavallando/react-flow-form/issues"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "http": "^0.0.1-security",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "tsup": "^6.5.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "@cav/react-flow-form",
+  "version": "0.0.1",
+  "description": "TypeForm styled, customizable form built with react-hook-forms",
+  "keywords": [
+    "react",
+    "form",
+    "hooks",
+    "react-hook-forms",
+    "TypeForm",
+    "QuillForm"
+  ],
+  "author": "Michael Cavallaro <michaelcavallaro03@gmail.com>",
+  "homepage": "https://github.com/Cavallando/react-flow-form#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "source": "src/index.tsx",
+  "module": "dist/module.js",
+  "scripts": {
+    "build": "tsup src/index.tsx --format cjs --dts",
+    "clean": "rm -rf dist",
+    "prepack": "yarn build",
+    "compile": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cavallando/react-flow-form.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cavallando/react-flow-form/issues"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-transition-group": "^4.4.5",
+    "@types/styled-components": "^5.1.26",
+    "tsup": "^6.5.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.41.0",
+    "react-transition-group": "^4.4.5",
+    "styled-components": "5.3.6",
+    "typescript": ">=3.0.0"
+  },
+  "peerDependencies": {
+    "eslint-plugin-n": "^15.6.0"
+  }
+}
