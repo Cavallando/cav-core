@@ -1,13 +1,12 @@
 import React, { useRef } from "react";
 import { useState } from "react";
-import { Step } from "./form-types/step";
+import { Step, Section, Question } from "..";
 import {
   FormBuilderWrapper,
   StepWrapper,
   ArrowsWrapper,
   ArrowsButton,
 } from "./styled";
-import { Section, Question } from "./form-sections";
 import { FieldValues } from "react-hook-form";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import { PageWrapper } from "./styled";

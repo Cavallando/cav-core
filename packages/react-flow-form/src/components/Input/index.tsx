@@ -1,14 +1,23 @@
 import React, { ChangeEvent, useState } from "react";
-import { FieldValues, Path, UnPackAsyncDefaultValues, UseFormReturn } from "react-hook-form";
-import { InputWrapper, Input } from "./styled";
+import {
+  FieldValues,
+  Path,
+  UnPackAsyncDefaultValues,
+  UseFormReturn,
+} from "react-hook-form";
+import { InputWrapper, Input as StyledInput } from "./styled";
 
-type InputTextProps<FormValues extends FieldValues> = {
+type InputProps<FormValues extends FieldValues> = {
   register: UseFormReturn<FormValues>["register"];
   placeholder: string;
   formId: Path<FormValues>;
 };
 
-function InputText<FormValues extends FieldValues>({ placeholder, register, formId }: InputTextProps<FormValues>) {
+export function Input<FormValues extends FieldValues>({
+  placeholder,
+  register,
+  formId,
+}: InputProps<FormValues>) {
   const [value, setValue] = useState("");
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +26,7 @@ function InputText<FormValues extends FieldValues>({ placeholder, register, form
 
   return (
     <InputWrapper>
-      <Input
+      <StyledInput
         value={value}
         // TODO: Fix me
         {...register(formId as Path<UnPackAsyncDefaultValues<FormValues>>)}
@@ -28,5 +37,3 @@ function InputText<FormValues extends FieldValues>({ placeholder, register, form
     </InputWrapper>
   );
 }
-
-export default InputText;

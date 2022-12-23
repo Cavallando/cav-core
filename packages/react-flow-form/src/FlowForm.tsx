@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { FieldValues, FormProvider, useForm } from "react-hook-form";
-import GlobalStyle from "../styles/global";
-import { Step } from "./form-types";
+import GlobalStyle from "./styles/global";
+import { Step } from "./components";
 import {
   FormBuilderProps,
   FormBuilder as FormBuilderComponent,
-} from "./FormBuilder";
+} from "./components";
 
 export type FlowFormProps<FormValues extends FieldValues> =
   FormBuilderProps<FormValues>;

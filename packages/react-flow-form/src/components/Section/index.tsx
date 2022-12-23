@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
+import { Button } from "../Button";
+import { StepContent } from "../Step";
 import { SectionWrapper, Text } from "./styled";
-import { Button } from "../../form-components";
-import { StepContent } from "../../form-types/step";
 
 type SectionProps = {
   content: StepContent[];
@@ -24,5 +24,4 @@ function SectionInner(
   );
 }
 
-const Section = forwardRef(SectionInner);
-export default Section;
+export const Section = forwardRef(SectionInner);

@@ -16,6 +16,7 @@ export type SelectStep = {
     label: string;
   }[];
 };
+
 export type InputStep = {
   type: "input";
   placeholder: string;

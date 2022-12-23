@@ -14,10 +14,8 @@
   "license": "ISC",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "source": "src/index.tsx",
-  "module": "dist/module.js",
   "scripts": {
-    "build": "tsup src/index.tsx --format cjs --dts",
+    "build": "tsup src/index.ts --format cjs --dts",
     "clean": "rm -rf dist",
     "prepack": "yarn build",
     "compile": "tsc --noEmit",

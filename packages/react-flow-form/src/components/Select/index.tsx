@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FieldValues, Path, PathValue, UnPackAsyncDefaultValues, UseFormReturn } from "react-hook-form";
-import { SelectStep } from "../step";
+import {
+  FieldValues,
+  Path,
+  PathValue,
+  UnPackAsyncDefaultValues,
+  UseFormReturn,
+} from "react-hook-form";
+import { SelectStep } from "../Step";
 import { SelectWrapper, InputSelect, OptionsWrapper, Option } from "./styled";
 
 // Hook
@@ -36,11 +42,18 @@ type SelectProps<FormValues extends FieldValues> = {
   formId: Path<FormValues>;
 };
 
-function Select<FormValues extends FieldValues>({ values, formId, setValue, getValues }: SelectProps<FormValues>) {
+function Select<FormValues extends FieldValues>({
+  values,
+  formId,
+  setValue,
+  getValues,
+}: SelectProps<FormValues>) {
   const selectRef = useRef<HTMLDivElement | null>(null);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   // TODO: Fix these to be real types
-  const getValuesId = [formId] as unknown as Path<UnPackAsyncDefaultValues<FormValues>>;
+  const getValuesId = [formId] as unknown as Path<
+    UnPackAsyncDefaultValues<FormValues>
+  >;
   const [itemChecked, setItemChecked] = useState(getValues(getValuesId) || {});
 
   useOnClickOutside(selectRef, () => {
@@ -50,20 +63,29 @@ function Select<FormValues extends FieldValues>({ values, formId, setValue, getV
   const handleChange = (option: SelectStep["values"]["0"]) => {
     let valueSelected = getValues(getValuesId);
     if (!valueSelected) {
-      valueSelected = {} as PathValue<UnPackAsyncDefaultValues<FormValues>, Path<UnPackAsyncDefaultValues<FormValues>>>;
+      valueSelected = {} as PathValue<
+        UnPackAsyncDefaultValues<FormValues>,
+        Path<UnPackAsyncDefaultValues<FormValues>>
+      >;
     }
 
     if (valueSelected.value === option.value) {
       setItemChecked({});
       setValue(
         getValuesId,
-        {} as PathValue<UnPackAsyncDefaultValues<FormValues>, Path<UnPackAsyncDefaultValues<FormValues>>>
+        {} as PathValue<
+          UnPackAsyncDefaultValues<FormValues>,
+          Path<UnPackAsyncDefaultValues<FormValues>>
+        >
       );
     } else {
       setItemChecked(option);
       setValue(
         getValuesId,
-        option as PathValue<UnPackAsyncDefaultValues<FormValues>, Path<UnPackAsyncDefaultValues<FormValues>>>
+        option as PathValue<
+          UnPackAsyncDefaultValues<FormValues>,
+          Path<UnPackAsyncDefaultValues<FormValues>>
+        >
       );
     }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import FlowForm, { Step } from "@cav/react-flow-form";
+import { FlowForm, Step } from "@cav/react-flow-form";
 type FormValues = {
   field1: string;
   field2: string;
@@ -15,7 +15,8 @@ const steps: Step<FormValues>[] = [
     content: [
       {
         type: "text",
-        value: 'Hey there. We"d love to learn more about you and how our product is helping you.',
+        value:
+          'Hey there. We"d love to learn more about you and how our product is helping you.',
       },
       {
         type: "text",
@@ -27,7 +28,8 @@ const steps: Step<FormValues>[] = [
     id: 2,
     formId: "field1",
     type: "question",
-    title: "First off, are you using the product for business or personal use? *",
+    title:
+      "First off, are you using the product for business or personal use? *",
     subtitle: "",
     content: [],
   },
@@ -35,7 +37,8 @@ const steps: Step<FormValues>[] = [
     id: 3,
     formId: "field2",
     type: "question",
-    title: "Great. What is the size of your company? This question is required. *",
+    title:
+      "Great. What is the size of your company? This question is required. *",
     subtitle: "",
     content: [
       {
@@ -65,7 +68,8 @@ const steps: Step<FormValues>[] = [
     id: 4,
     formId: "field3",
     type: "question",
-    title: "And which type of industry do you work in? This question is required. *",
+    title:
+      "And which type of industry do you work in? This question is required. *",
     subtitle: "",
     content: [
       {
@@ -95,7 +99,8 @@ const steps: Step<FormValues>[] = [
     id: 5,
     formId: "field4",
     type: "question",
-    title: "If you'd like us to follow up with you, please be sure to leave your email address below :)",
+    title:
+      "If you'd like us to follow up with you, please be sure to leave your email address below :)",
     subtitle: "",
     content: [
       {

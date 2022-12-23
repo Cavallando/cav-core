@@ -1,8 +1,10 @@
 import React, { ForwardedRef, forwardRef } from "react";
-import { Checkbox, Select, InputText } from "../../form-types";
-import { QuestionWrapper, AnswersWrapper, QuestionTitle } from "./styled";
 import { FieldValues, Path, useFormContext } from "react-hook-form";
-import { StepContent } from "../../form-types/step";
+import { Checkbox } from "../Checkbox";
+import { Input } from "../Input";
+import Select from "../Select";
+import { StepContent } from "../Step";
+import { QuestionWrapper, QuestionTitle, AnswersWrapper } from "./styled";
 
 type QuestionProps<FormValues extends FieldValues> = {
   content: StepContent[];
@@ -41,7 +43,7 @@ function QuestionInner<FormValues extends FieldValues>(
         );
       case "input":
         return (
-          <InputText
+          <Input
             register={register}
             formId={formId!}
             placeholder={item.placeholder}
@@ -66,5 +68,4 @@ function QuestionInner<FormValues extends FieldValues>(
   );
 }
 
-const Question = forwardRef(QuestionInner);
-export default Question;
+export const Question = forwardRef(QuestionInner);
