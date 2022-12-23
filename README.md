@@ -2,6 +2,13 @@
 
 This is an official Yarn v1 starter turborepo.
 
+## TODO
+
+- [ ] Setup CI/CD for separate packages
+- [ ] Automate release notes with release-it/commitlint
+- [ ] Setup npm publishing
+- [ ] Generated docs for each package
+
 ## What's inside?
 
 This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:

@@ -11,7 +11,6 @@
     "QuillForm"
   ],
   "author": "Michael Cavallaro <michaelcavallaro03@gmail.com>",
-  "homepage": "https://github.com/Cavallando/react-flow-form#readme",
   "license": "ISC",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
